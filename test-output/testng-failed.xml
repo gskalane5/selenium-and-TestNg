@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Com.OrangeHRM.TestCases.SmokeTest_class">
+      <class name="Com.OrangeHRM.TestCases.Leavepage">
         <methods>
-          <include name="validatesmoketest"/>
+          <include name="teardown"/>
           <include name="setup"/>
-          <include name="validatesmoketest1"/>
-          <include name="Teardown"/>
-          <include name="validatesmoketest2"/>
+          <include name="runapplyleave"/>
         </methods>
-      </class> <!-- Com.OrangeHRM.TestCases.SmokeTest_class -->
+      </class> <!-- Com.OrangeHRM.TestCases.Leavepage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

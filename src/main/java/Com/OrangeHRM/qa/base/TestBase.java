@@ -16,9 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import Com.OrangeHRM.qa.Util.TestUtil;
 import net.bytebuddy.utility.RandomString;
 
-public class TestBase {
-  
-	
+public class TestBase {	
 	
 	public static WebDriver driver;
 	public static Properties props;
@@ -27,11 +25,10 @@ public class TestBase {
 		
 		props = new Properties();
 		
-		FileInputStream ip = new FileInputStream("C:\\project_FrameWork\\src\\main\\java\\Com\\OrangeHRM\\qa\\Config\\config.properties");
+		FileInputStream ip = new FileInputStream("c:\\Users\\ganesh\\git\\repository\\4Jun_FrameWork\\src\\main\\java\\Com\\OrangeHRM\\qa\\Config\\config.properties");
 		
 		props.load(ip);
 	}
-	
 	
 	@SuppressWarnings("deprecation")
 	public static void initialization() {
@@ -52,27 +49,21 @@ public class TestBase {
 		driver.get(props.getProperty("url"));
 	}
 	
-	public String getScreenshotAs(String testCaseName) throws IOException {
+	public File getScreenshotAs(String testCaseName) throws IOException {
 		
 		TakesScreenshot ts = (TakesScreenshot)driver;
 				
 		File source =ts.getScreenshotAs(OutputType.FILE);
 		String Random = RandomString.make(5);	
 	
-		//File destination= new File("C:\\project_FrameWork\\Screenshot");
+		File destination= new File("C:\\project_FrameWork\\Screenshot");
 		
-		String destination = System.getProperty("user.dir")+"/Screenshot/"+testCaseName+""+Random+".png";
+		//String destination = System.getProperty("user.dir")+"/Screenshot/"+testCaseName+""+Random+".png";
 		
-		FileUtils.copyFile(source, new File(destination));
+		FileUtils.copyFile(source, destination);
 		
 		return destination;
 		
 	}
-	
-	
-	
-	
-	
-	
 	
 }

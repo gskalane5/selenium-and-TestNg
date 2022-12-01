@@ -47,14 +47,10 @@ public class Listners extends TestBase implements ITestListener {
 		try {
 			driver= (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
 		} catch (Exception e) {
-			e.printStackTrace();	
+ 			e.printStackTrace();	
 		}
 		
-		try {
-			extentTest.get().addScreenCaptureFromPath(getScreenshotAs(testmethodname),result.getMethod().getMethodName());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		extentTest.get().addScreenCaptureFromPath(result.getMethod().getMethodName());
 		
 	}
 

@@ -19,7 +19,6 @@ public class LoginpageTest extends TestBase {
 	public LoginpageTest() throws IOException {
 		super();
 	}
-
 	
 	@BeforeMethod
     public void Setup() throws IOException {

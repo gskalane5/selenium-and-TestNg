@@ -1,7 +1,5 @@
 package Resources;
 
-import java.io.FileInputStream;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
@@ -18,7 +16,7 @@ public class ExtentReporterNG {
 		
 		ExtentSparkReporter reporter = new ExtentSparkReporter("C:\\project_FrameWork\\reports\\index.html");
 		
-		//ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+		ExtentSparkReporter reporter1 = new ExtentSparkReporter(path);
 		reporter.config().setReportName("project framework report");
 		reporter.config().setDocumentTitle("Automation Execution Results");
 		
